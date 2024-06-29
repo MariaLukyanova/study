@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Опрос</title>
+  </head>
+  <body>
+    <h1>Опрос для обладателей магических животных</h1>
+    <form action="script.php" method="post"></form>
+    <div>
+      <label for="nickname">Кличка питомца</label>
+      <input type="text" id="nickname" />
+    </div>
+    <div>
+      <label for="contacts">Имя и контакты владельца</label>
+      <input type="text" id="contacts" />
+    </div>
+    <div>
+      <label for="breed">Укажите породу</label>
+      <select id="breed">
+        <option value="1">Выберите</option>
+        <option value="2">Феникс</option>
+        <option value="3">Единорог</option>
+        <option value="4">Дракон</option>
+        <option value="5">Мантикора</option>
+        <option value="6">Василиск</option>
+      </select>
+    </div>
+    <div>
+      <label for="food">Чем питается</label> <br />
+      <input type="checkbox" id="food" /> Сухой корм <br />
+      <input type="checkbox" id="food" /> Влажный корм <br />
+      <input type="checkbox" id="food" /> Натуральный корм <br />
+    </div>
+    <div>
+      <label for="sex">Самец или самка</label> <br />
+      <input type="radio" name="sex" /> Самец <br />
+      <input type="radio" name="sex" /> Самка <br />
+    </div>
+    <div>
+      <label for="com">Комментарий владельца</label><br />
+      <textarea rows="7" cols="47" id="com"></textarea>
+    </div>
+    <div>
+      <label for="photo">Приложить фото питомца</label><br />
+      <input type="file" id="photo" />
+    </div>
+    <div>
+      <input type="reset" value="Очистить" />
+      <input type="submit" value="Отправить" />
+    </div>
+  </body>
+</html>
