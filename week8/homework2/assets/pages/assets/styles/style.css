@@ -1,0 +1,113 @@
+body {
+  font-family: "Roboto Slab", serif;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.form {
+  background-color: #5222d0;
+  width: 115px;
+  height: 38px;
+  border: 0px solid transparent;
+  border-radius: 50px;
+  position: relative;
+}
+
+.form__button {
+  background-color: transparent;
+  width: 115px;
+  height: 38px;
+  border: 0px solid transparent;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 30px;
+}
+
+.block {
+  width: 365px;
+}
+
+.block__title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.block__desc {
+  font-size: 20px;
+}
+
+.block-news {
+  width: 365px;
+  height: 233px;
+  background-color: #ec615b;
+}
+
+.block-news__title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: 20px;
+  margin-block-end: 0.5em;
+}
+
+.block-news__email {
+  display: block;
+  margin-left: 20px;
+  width: 323px;
+  height: 50px;
+  border: 0px solid transparent;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.block-news__button {
+  width: 135px;
+  height: 38px;
+  border: 0px solid transparent;
+  border-radius: 50px;
+  background-color: #5222d0;
+  margin-left: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.nav {
+  margin-top: 70px;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  padding-inline-start: 0px;
+}
+
+.nav__item {
+  font-size: 20px;
+}
+
+a:link {
+  color: #ec615b;
+}
+
+a:visited {
+  color: #5222d0;
+}
