@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homework</title>
+		<link rel="stylesheet" href="assets/styles/normalize.css" />
+		<link rel="stylesheet" href="assets/styles/style.css" />
+		<script src="assets/scripts/index.js"></script>
+	</head>
+	<body>
+		<h1 class="grid-item_wrap-title">Сервис комментариев со спам-фильтром</h1>
+		<main class="grid-item_main">
+			<div>
+				<h2 class="grid-item_wrap-subtitle">Оставьте свой комментарий:</h2>
+				<div>
+					<div>
+						<div class="grid-item_wrap-section-name-title">
+							Введите ваше Имя:
+						</div>
+						<form class="grid-item_wrap-section-name-form">
+							<input
+								type="text"
+								class="grid-item_wrap-section-name-form-input"
+								id="nameInput"
+							/>
+						</form>
+					</div>
+					<div>
+						<div class="grid-item_wrap-section-photo-title">
+							Введите ссылку вашего аватара:
+						</div>
+						<form class="grid-item_wrap-section-photo-form">
+							<input
+								type="url"
+								class="grid-item_wrap-section-photo-form-input"
+								id="photoInput"
+							/>
+						</form>
+					</div>
+					<div>
+						<div class="grid-item_wrap-section-comment-title">
+							Оставьте комментарий:
+						</div>
+						<textarea
+							type="text"
+							class="grid-item_wrap-section-comment-text"
+							id="textInput"
+						></textarea>
+					</div>
+					<button
+						type="button"
+						class="grid-item_wrap-button"
+						onclick="addComment()"
+					>
+						Отправить
+					</button>
+				</div>
+			</div>
+			<div>
+				<h2 class="grid-item_wrap2-title">Чат:</h2>
+				<div class="grid-item_wrap2-chat" id="chat"></div>
+			</div>
+		</main>
+	</body>
+</html>
