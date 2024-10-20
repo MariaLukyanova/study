@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homework</title>
+		<link rel="stylesheet" href="assets/styles/normalize.css" />
+		<link rel="stylesheet" href="assets/styles/style.css" />
+		<script src="assets/scripts/script.js"></script>
+	</head>
+	<body>
+		<main>
+			<div class="question">
+				1. Создайте пустой массив с именем grades и заполните массив случайными
+				оценками от 1 до 100 для 12 студентов. Для генерации случайных оценок
+				используйте функцию Math.random().
+			</div>
+			<div class="answer">
+				Ответ:
+				<p class="newElement" id="answer1"></p>
+			</div>
+			<div class="question">
+				2. Рассчитайте и выведите средний балл студентов, используя методы
+				массивов.
+			</div>
+			<div class="answer">
+				Ответ:
+				<p class="newElement" id="answer2"></p>
+			</div>
+			<div class="question">
+				3. Найдите и выведите максимальный балл среди студентов, используя
+				соответствующий метод массива.
+			</div>
+			<div class="answer">
+				Ответ:
+				<p class="newElement" id="answer3"></p>
+			</div>
+			<div class="question">
+				4. Найдите и выведите минимальный балл среди студентов, используя
+				соответствующий метод массива.
+			</div>
+			<div class="answer">
+				Ответ:
+				<p class="newElement" id="answer4"></p>
+			</div>
+			<div class="question">
+				5. Посчитайте и выведите количество студентов, получивших положительную
+				оценку (балл выше или равен 60). Используйте метод массива, который
+				фильтрует оценки и оставляет только те, которые соответствуют заданному
+				условию. Затем посчитайте количество оставшихся оценок и выведите
+				результат.
+			</div>
+			<div class="answer">
+				Ответ:
+				<p class="newElement" id="answer5"></p>
+			</div>
+			<div class="question">
+				6. Посчитайте и выведите количество студентов, получивших отрицательную
+				оценку (балл ниже 60). Используйте аналогичный подход, как в предыдущем
+				шаге.
+			</div>
+			<div class="answer">
+				Ответ:
+				<p class="newElement" id="answer6"></p>
+			</div>
+			<div class="question">
+				7. Преобразуйте числовые оценки в формат буквенных оценок A/B/C/D/E,
+				используя следующие правила:
+				<br />Если оценка находится в диапазоне от 80 до 100, преобразуйте её в
+				"A" <br />Если оценка находится в диапазоне от 60 до 79, преобразуйте её
+				в "B" <br />Если оценка находится в диапазоне от 40 до 59, преобразуйте
+				её в "C" <br />Если оценка находится в диапазоне от 20 до 39,
+				преобразуйте её в "D" <br />Если оценка ниже 20, преобразуйте её в "E"
+			</div>
+			<div class="answer">
+				Ответ:
+				<p class="newElement" id="answer7"></p>
+			</div>
+		</main>
+		<script>
+			let div1 = document.getElementById("answer1");
+			div1.textContent = grades;
+			div2 = document.getElementById("answer2");
+			div2.textContent = averageGrade;
+			div3 = document.getElementById("answer3");
+			div3.textContent = maxGrade;
+			div4 = document.getElementById("answer4");
+			div4.textContent = minGrade;
+			div5 = document.getElementById("answer5");
+			div5.textContent = positiveGrades.length;
+			div6 = document.getElementById("answer6");
+			div6.textContent = negativeGrades.length;
+			div7 = document.getElementById("answer7");
+			div7.textContent = letterGrades;
+		</script>
+	</body>
+</html>

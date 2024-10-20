@@ -1,0 +1,23 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2.8vh;
+	width: 90vw;
+	margin: 0 auto;
+}
+
+.question {
+	margin-top: 20px;
+	color: #031b0e;
+}
+
+.answer {
+	margin-top: 5px;
+	color: #031b0e;
+	text-decoration: underline;
+}
+
+.newElement {
+	margin-top: 5px;
+	color: #280b48;
+	display: inline;
+}
