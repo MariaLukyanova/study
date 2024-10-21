@@ -1,0 +1,31 @@
+body {
+	font-family: Arial, sans-serif;
+	padding: 20px;
+}
+h1 {
+	text-align: center;
+}
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+button {
+	padding: 10px 20px;
+	background-color: #0768fa;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+.button:hover {
+	background-color: #0730fa;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+li {
+	padding: 5px 0;
+}
+.result {
+	margin-top: 20px;
+}
