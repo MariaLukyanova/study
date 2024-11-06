@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homework</title>
+		<link rel="stylesheet" href="assets/styles/normalize.css" />
+		<link rel="stylesheet" href="assets/styles/style.css" />
+		<script defer src="assets/scripts/script.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Форма регистрации</h1>
+			<form novalidate name="registrationForm">
+				<!-- Форма ввода имени -->
+				<input
+					type="text"
+					id="name"
+					name="name"
+					placeholder="Введите Ваше имя"
+					required
+					pattern="[A-Za-zА-Яа-яЁё\s]{2,20}"
+					title="Имя должно содержать только буквы и пробелы, длина - от 2 до 20 символов."
+				/>*
+				<br />
+
+				<!-- Строка вывода ошибки имени -->
+				<span class="error" id="nameError"></span> <br />
+
+				<!-- Форма ввода email -->
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="Введите Ваш email"
+					required
+					pattern="^\S+@\S+\.\S+$"
+					title="Email должен содержать символ @ и доменное имя"
+				/>*<br />
+
+				<!-- Строка вывода ошибки email-->
+				<span class="error" id="emailError"></span> <br />
+
+				<!-- Форма ввода возраста -->
+				<input
+					type="number"
+					id="age"
+					name="age"
+					placeholder="Возраст"
+					required
+					min="1"
+					max="120"
+				/>*<br />
+
+				<!-- Строка вывода ошибки возраста -->
+				<span class="error" id="ageError"></span> <br />
+
+				<!-- Форма ввода пола -->
+				Укажите Ваш пол: *<br />
+				Мужской<input
+					type="radio"
+					id="male"
+					name="gender"
+					value="male"
+					required
+				/>
+				Женский<input
+					type="radio"
+					id="female"
+					name="gender"
+					value="female"
+					required
+				/><br />
+
+				<!-- Строка вывода ошибки пола -->
+				<span class="error" id="genderError"></span> <br />
+
+				<!-- Форма ввода профессии -->
+				<select
+					name="profession"
+					aria-placeholder="Выберите Вашу профессию"
+					required
+				>
+					<option value="" disabled selected>Выберите Вашу профессию</option>
+					<option value="doctor">Врач</option>
+					<option value="programmer">Программист</option>
+					<option value="teacher">Учитель</option>
+					<option value="designer">Дизайнер</option>
+					<option value="engineer">Инженер</option>
+					<option value="seller">Продавец</option>
+					<option value="other">Другое</option></select
+				>*
+				<br />
+
+				<!-- Строка вывода ошибки профессии -->
+				<span class="error" id="professionError"></span> <br />
+
+				<!-- Форма ввода пароля -->
+				<input
+					type="password"
+					id="password"
+					name="password"
+					placeholder="Введите Ваш пароль"
+					required
+					minlength="8"
+					pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+					title="Пароль должен содержать не менее 8 символов, включая заглавные и строчные буквы, а также цифры."
+				/>*<br />
+
+				<!-- Строка вывода ошибки пароля -->
+				<span class="error" id="passwordError"></span> <br />
+
+				<!-- Форма согласия с обработкой персональных данных -->
+				<input type="checkbox" id="agreement" name="agreement" required /> Я
+				согласен(на) с обработкой персональных данных *<br />
+
+				<!-- Строка вывода ошибки согласия с обработкой персональных данных-->
+				<span class="error" id="agreementError"></span> <br />
+
+				<!-- Кнопка регистрации -->
+				<button type="submit" id="submitBtn" name="submitBtn">
+					Зарегистрироваться
+				</button>
+			</form>
+		</div>
+	</body>
+</html>
