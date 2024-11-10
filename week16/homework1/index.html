@@ -9,119 +9,126 @@
 		<script defer src="assets/scripts/script.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<h1>Форма регистрации</h1>
-			<form novalidate name="registrationForm">
-				<!-- Форма ввода имени -->
+		<form id="registrationForm">
+			<h2>Форма регистрации</h2>
+
+			<!-- Поле ввода имени -->
+			<div>
+				<label for="name">Имя</label>
 				<input
 					type="text"
 					id="name"
 					name="name"
-					placeholder="Введите Ваше имя"
+					placeholder="Введите ваше имя"
 					required
-					pattern="[A-Za-zА-Яа-яЁё\s]{2,20}"
-					title="Имя должно содержать только буквы и пробелы, длина - от 2 до 20 символов."
-				/>*
-				<br />
+					minlength="2"
+					maxlength="20"
+					pattern="[A-Za-zА-Яа-яЁё ]+"
+				/>
+				<div class="error-message" id="nameError">
+					Имя должно содержать только буквы и пробелы, длиной от 2 до 20
+					символов.
+				</div>
+			</div>
 
-				<!-- Строка вывода ошибки имени -->
-				<span class="error" id="nameError"></span> <br />
-
-				<!-- Форма ввода email -->
+			<!-- Поле ввода электронной почты -->
+			<div>
+				<label for="email">Электронная почта</label>
 				<input
 					type="email"
 					id="email"
 					name="email"
-					placeholder="Введите Ваш email"
+					placeholder="Введите вашу почту"
 					required
-					pattern="^\S+@\S+\.\S+$"
-					title="Email должен содержать символ @ и доменное имя"
-				/>*<br />
+				/>
+				<div class="error-message" id="emailError">
+					Введите корректный адрес электронной почты.
+				</div>
+			</div>
 
-				<!-- Строка вывода ошибки email-->
-				<span class="error" id="emailError"></span> <br />
-
-				<!-- Форма ввода возраста -->
+			<!-- Поле ввода возраста -->
+			<div>
+				<label for="age">Возраст</label>
 				<input
 					type="number"
 					id="age"
 					name="age"
-					placeholder="Возраст"
+					placeholder="Введите ваш возраст"
 					required
 					min="1"
-					max="120"
-				/>*<br />
-
-				<!-- Строка вывода ошибки возраста -->
-				<span class="error" id="ageError"></span> <br />
-
-				<!-- Форма ввода пола -->
-				Укажите Ваш пол: *<br />
-				Мужской<input
-					type="radio"
-					id="male"
-					name="gender"
-					value="male"
-					required
 				/>
-				Женский<input
-					type="radio"
-					id="female"
-					name="gender"
-					value="female"
-					required
-				/><br />
+				<div class="error-message" id="ageError">
+					Введите корректный возраст.
+				</div>
+			</div>
 
-				<!-- Строка вывода ошибки пола -->
-				<span class="error" id="genderError"></span> <br />
+			<!-- Поле выбора пола -->
+			<div>
+				<label>Пол</label>
+				<div class="gender">
+					<label
+						><input type="radio" name="gender" value="male" required />
+						Мужчина</label
+					>
+					<label
+						><input type="radio" name="gender" value="female" /> Женщина</label
+					>
+				</div>
+			</div>
 
-				<!-- Форма ввода профессии -->
-				<select
-					name="profession"
-					aria-placeholder="Выберите Вашу профессию"
-					required
-				>
-					<option value="" disabled selected>Выберите Вашу профессию</option>
+			<!-- Поле выбора профессии -->
+			<div>
+				<label for="profession">Профессия</label>
+				<select id="profession" name="profession" required>
+					<option value="" disabled selected>Выберите профессию</option>
 					<option value="doctor">Врач</option>
 					<option value="programmer">Программист</option>
 					<option value="teacher">Учитель</option>
 					<option value="designer">Дизайнер</option>
 					<option value="engineer">Инженер</option>
 					<option value="seller">Продавец</option>
-					<option value="other">Другое</option></select
-				>*
-				<br />
+					<option value="other">Другое</option>
+				</select>
+				<div class="error-message" id="professionError">
+					Выберите профессию.
+				</div>
+			</div>
 
-				<!-- Строка вывода ошибки профессии -->
-				<span class="error" id="professionError"></span> <br />
-
-				<!-- Форма ввода пароля -->
+			<!-- Поле ввода пароля -->
+			<div>
+				<label for="password">Пароль</label>
 				<input
 					type="password"
 					id="password"
 					name="password"
-					placeholder="Введите Ваш пароль"
+					placeholder="Введите пароль"
 					required
 					minlength="8"
-					pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
-					title="Пароль должен содержать не менее 8 символов, включая заглавные и строчные буквы, а также цифры."
-				/>*<br />
+					pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}"
+				/>
+				<div class="error-message" id="passwordError">
+					Пароль должен быть не менее 8 символов и содержать заглавную, строчную
+					буквы и цифру.
+				</div>
+			</div>
 
-				<!-- Строка вывода ошибки пароля -->
-				<span class="error" id="passwordError"></span> <br />
+			<!-- Поле соглашения с обработкой данных -->
+			<div class="agreement">
+				<label id="agreementInput">
+					<input type="checkbox" id="consent" name="consent" required />
+					Согласен с условиями обработки данных
+				</label>
+				<div class="error-message" id="consentError">
+					Вы должны согласиться с условиями.
+				</div>
+			</div>
 
-				<!-- Форма согласия с обработкой персональных данных -->
-				<input type="checkbox" id="agreement" name="agreement" required /> Я
-				согласен(на) с обработкой персональных данных *<br />
-
-				<!-- Строка вывода ошибки согласия с обработкой персональных данных-->
-				<span class="error" id="agreementError"></span> <br />
-
-				<!-- Кнопка регистрации -->
-				<button type="submit" id="submitBtn" name="submitBtn">
+			<!-- Кнопка отправки -->
+			<div>
+				<button type="submit" id="submitButton" disabled>
 					Зарегистрироваться
 				</button>
-			</form>
-		</div>
+			</div>
+		</form>
 	</body>
 </html>
