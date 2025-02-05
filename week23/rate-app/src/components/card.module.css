@@ -1,0 +1,49 @@
+.rate {
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	width: 350px;
+	border: 1.5px solid lightgray;
+}
+
+.name,
+.price {
+	color: #eeeeee;
+	align-content: center;
+}
+
+.name {
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 30px;
+	height: 50px;
+}
+
+.price {
+	font-size: 45px;
+	height: 150px;
+}
+
+.speed,
+.info {
+	background-color: #f8f8f8;
+	color: gray;
+	font-size: 18px;
+	height: 50px;
+	align-content: center;
+}
+
+.blue {
+	background-color: #2cc1d5;
+}
+
+.green {
+	background-color: #24ae8d;
+}
+
+.red {
+	background-color: #f46a5f;
+	transform: scale(1.1);
+}
+
+.grey {
+	background-color: #333a44;
+}
