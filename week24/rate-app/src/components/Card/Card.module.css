@@ -1,0 +1,65 @@
+.rate {
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	width: 350px;
+	border: 1.5px solid lightgray;
+}
+
+.name,
+.price {
+	color: #eeeeee;
+	align-content: center;
+}
+
+.name {
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 30px;
+	height: 50px;
+}
+
+.price {
+	font-size: 45px;
+	height: 150px;
+}
+
+.speed,
+.info {
+	background-color: #f8f8f8;
+	color: gray;
+	font-size: 18px;
+	height: 50px;
+	align-content: center;
+}
+
+.blue {
+	background-color: #2cc1d5;
+}
+
+.blue:hover {
+	transform: scale(1.03);
+}
+
+.green {
+	background-color: #24ae8d;
+}
+
+.green:hover {
+	transform: scale(1.03);
+}
+
+.red {
+	background-color: #f46a5f;
+	transform: scale(1.1);
+}
+
+.red:hover {
+	transform: scale(1.13);
+}
+
+.grey {
+	background-color: #333a44;
+}
+
+.grey:hover {
+	transform: scale(1.03);
+}
